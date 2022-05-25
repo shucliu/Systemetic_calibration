@@ -20,4 +20,4 @@ optparam.m: Plot parameter distributions which lead to best model results given 
 The folder PolyfitnTools includes tools for conducting the quadratic regression for metamodel.
 
 # Sample data for the systemetic_calibration
-The folder for_cali includes sample data for the systemetic_calibration.
+The folder 5para_4months includes sample data for the systemetic_calibration.

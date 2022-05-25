@@ -19,7 +19,10 @@
 %% Independent simulations
 %  --nind
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dd85ae535b9b71cb7e5eb5bd93eea9322e40c7ae
 simdir='./5para_4months/';
 obsdir='./5para_4months/obs/';
 
