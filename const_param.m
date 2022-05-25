@@ -20,12 +20,8 @@
 %  --nind
 %  --valdata
 
-
-%simdir='/hymet/ssilje/cosmopompa_calibration/modeloutput/output_2005-2009/';
-%obsdir='/hymet/ssilje/cosmopompa_calibration/observations_2005-2009/';
-
-simdir='../for_cali/5para_4months/';
-obsdir='../for_cali/5para_4months/obs/';
+simdir='./5para_4months/';
+obsdir='./5para_4months/obs/';
 
 global nmonths
 global nyear
