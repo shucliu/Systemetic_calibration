@@ -110,51 +110,19 @@ else
         % FIT METAMODEL
         %-----------------------------------------------------------------
         %
-        % in the code-package there are two methods to fit the metamodel
-        % (neelin_e_analytic and neelin_e). They give slightly different
-        % results, and it is not quite clear. For the calibration performed by
-        % Omar, he used the neelin_e_analytic, but in the CALMO-max they
-        % use the neelin_e method
-        %
-        %
-        
-        % (1) Method Neelin to estimate MetaModel
-        
-        %metamodel=neelin_e_analytic(parameters,datamatrix,iv);
-        
-        % (2) Method CALMO to estimate MetaModel
-        %
         
         metamodel=neelin_e_lsc(parameters,datamatrix,iv);
         
         %-----------------------------------------------------------------
-        % VALIDATION METRICS
+        % VALIDATION METAMODEL
         %-----------------------------------------------------------------
         
-        % The fitted metamodel is analysed in terms of accuracy and non-linearity
-        % Different functions can be used for this purpose as described in
-        % Bellprat et al. (2012) JGR.
-        
-        %% (1) Estimate the error of independent simulations and plot scattorplots
-        %%
-        
-%         [errstd errpred predval]=errmeta(metamodel,parameters,datamatrix);
-        %% (2) Visualize mean metamodel parameters for linear, quadratic and
-        %%     interaction terms
-        
-        % metaparam(metamodel,parameters,datamatrix);
-        
-        %% (3) Visualize performance landscape for each parameter pair
-        %%     between all experiments
+        %%  Visualize performance landscape for each parameter pair
+        %%  between all experiments
 
          [ctrl errpred psinput]=ctrlpred(metamodel,parameters,datamatrix);
          planes(metamodel,parameters,datamatrix,ctrl,psinput);
         
-        %% (4) Plot routine to visualize experiments for a Neelin fit
-        %%
-	%% (5) See ps of input model data --lsc
-% 	[ctrl errpred psinput]=ctrlpred(metamodel,parameters,datamatrix);	
-       
 	%-----------------------------------------------------------------
         % OPTIMIZATION OF PARAMETERS
         %-----------------------------------------------------------------
@@ -179,12 +147,12 @@ else
        
         [lhscore lhexp popt pi]=lhopt(metamodel,parameters,datamatrix,lhacc);
         
-        %% (5) Plot performance range covered  by the metamodel and compare to
+        %% (2) Plot performance range covered  by the metamodel and compare to
         %% reference simulation
        
         histplot_opt(lhscore,datamatrix)
         
-        %% (6) Plot optimised parameter distributions
+        %% (3) Plot optimised parameter distributions
         errm=0.015; % Uncertainty of the metamodel, is currently set from
         % experience, needs to be computed from error of
         % independent simulations

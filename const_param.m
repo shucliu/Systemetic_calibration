@@ -19,10 +19,6 @@
 %% Independent simulations
 %  --nind
 
-<<<<<<< HEAD
-
-=======
->>>>>>> dd85ae535b9b71cb7e5eb5bd93eea9322e40c7ae
 simdir='./5para_4months/';
 obsdir='./5para_4months/obs/';
 
@@ -33,8 +29,6 @@ global nyear
 nmonths=4; % Number of months
 nyear=1;
 nregions=28;
-
-% For the internal variability stddata_2000-2009.mat
 
 % This is for selecting years from multiyear dataset
 nyearstart=1;
