@@ -17,5 +17,7 @@ histplot_opt.m: Plot full performance range sampled with the latin hypercube exp
 
 optparam.m: Plot parameter distributions which lead to best model results given the uncertainty of the metamodel.
 
+The folder PolyfitnTools includes tools for conducting the quadratic regression for metamodel.
+
 # Sample data for the systemetic_calibration
 The folder for_cali includes sample data for the systemetic_calibration.
