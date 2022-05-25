@@ -21,9 +21,10 @@ function [ctrl errpred psinput]=ctrlpred(metamodel,parameters,datamatrix)
 %   model data 
 % HISTORY 
 % First version: 11.10.2013
+% Modified: 17.03.2022
 % AUTHOR  
 %   Omar Bellprat (omar.bellprat@gmail.com)
-
+%   Shuchang Liu (shuchang.liu@env.ethz.ch)
 
 
 %--------------------------------------------------------------------

@@ -41,8 +41,10 @@ function [PSopt xstar xopt pi]=lhopt(metamodel,parameters,datamatrix,lhacc)
 %   dmatrix: Predicted data for parameter experiment
 % HISTORY 
 % First version: 11.10.2013
+% Modified: 17.03.2022 by Shuchang Liu
 % AUTHOR  
 %   Omar Bellprat (omar.bellprat@gmail.com)
+%   Shuchang Liu (shuchang.liu@env.ethz.ch)
 % NOTE 
 % Currently routine does only allow to compute one experiment at
 % the time, could possibly changed by adapting matrix operations.

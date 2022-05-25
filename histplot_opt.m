@@ -18,9 +18,10 @@ function histplot_opt(lhscore,datamatrix)
 %   Plot: Histogram plot
 % HISTORY
 % First version: 11.10.2013
+% Modified: 17.03.2022
 % AUTHOR
 %   Omar Bellprat (omar.bellprat@gmail.com)
-
+%   Shuchang Liu (Shuchang.liu@env.ethz.ch)
 
 %--------------------------------------------------------------------
 % READ Input values from structures

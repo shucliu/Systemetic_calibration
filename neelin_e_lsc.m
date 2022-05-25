@@ -52,7 +52,7 @@ function [metamodel intcontout nointp]=neelin_e_lsc(parameters, datamatrix, nl)
 %      in the off-diagonal. Matrix symetric, B(i,j)=B(j,i).
 % HISTORY 
 % First version: 11.10.2013 by Omar Bellprat (omar.bellprat@gmail.com)
-% Modified: 17.03.2022 by Shuchang Liu
+% Modified: 17.03.2022 by Shuchang Liu (shuchang.liu@env.ethz.ch)
 
 %--------------------------------------------------------------------
 % READ Input values from structures

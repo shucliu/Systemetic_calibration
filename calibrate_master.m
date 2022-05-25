@@ -6,9 +6,10 @@
 %   Definitions for calibration, I/O of data, calling routines
 % HISTORY
 %   First version: 11.10.2013
+%   Modified: 17.03.2022 by Shuchang Liu (shuchang.liu@env.ethz.ch)
 % AUTHOR
 %   Omar Bellprat (omar.bellprat@gmail.com)
-
+%   Shuchang Liu (Shuchang.liu@env.ethz.ch)
 % Three data structures are defined:
 %
 % - Parameters: Contains all default parameter information
