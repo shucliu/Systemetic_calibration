@@ -29,7 +29,6 @@ const_param;
 obsdata=datamatrix.obsdata;
 stddata=datamatrix.stddata;
 refd=datamatrix.refdata; % Reference data
-indd=datamatrix.valdata; %independent runs
 
 % Uncomment when the optimal run is done
 %
@@ -42,11 +41,6 @@ optd=datamatrix.optdata;
 if datamatrix.score
     [pi PSref]=pscalc(refd,obsdata,stddata);
     
-    for i=1:nind
-        
-        [pi PSind(i)]=pscalc(indd(:,:,:,:,i),obsdata,stddata);
-        
-    end
     % Uncomment when the optimal run is done
     %
     

@@ -174,14 +174,6 @@ for i=1:size(pqn,1)
   [dum psinpref] = pscalc(datamatrix.refdata,obsdata,stddata);
   text(default(pqn(i,1))+dx,default(pqn(i,2))+dy,cellstr([num2str(round(psdefault,2)) ' (' num2str(round(psinpref,2)) ')']));
   
- %{ 
-  val = parameters(1).validation;
-  plot(val(pqn(i,1)),val(pqn(i,2)),'g*');
-  mmind = neelin_p(metamodel,parameters,datamatrix,val);
-  [dum psind] = pscalc(mmind,obsdata,stddata);
-  [dum psinpind] = pscalc(datamatrix.valdata,obsdata,stddata);
-  text(val(pqn(i,1))+dx,val(pqn(i,2))+dy,cellstr([num2str(round(psind,2)) ' (' num2str(round(psinpind,2)) ')']));
-  %}
 %%%%%%%%%%%%%%%%%lsc
 end
 

@@ -61,7 +61,7 @@ parameters=struct('name',paramn,'range',range','default',default,'name_tex',para
 expval=create_neelin_exp(parameters); % Experiment values to fit metamodel
 
 parameters=struct('name',paramn,'range',range','default',default,'experiments', ...
-    expval,'name_tex',paramnt,'validation',valdata','orirange',orirange');
+    expval,'name_tex',paramnt,'orirange',orirange');
 
 load('stddata_2016_avg.mat');
 iv=iv_n; stdobs=stdobs_n; err=err_n;
@@ -80,7 +80,6 @@ stddata=sqrt(err.^2+iv.^2+stdobs.^2);
 % Define Datamatrix
 
 moddata=[];
-valdata=[];
 obsdata=[];
 refdata=[];
 variables={4,'OLR','OSR','LHFL'}; % Index of variables in moddata,
@@ -89,7 +88,7 @@ variables={4,'OLR','OSR','LHFL'}; % Index of variables in moddata,
 scoren='ps'; % If scoren [], no computation of score assumed
 % and data values corresponding to score values
 
-datamatrix=struct('moddata',moddata,'refdata',refdata,'valdata',valdata,'obsdata', obsdata,'stddata',stddata,'score',scoren);
+datamatrix=struct('moddata',moddata,'refdata',refdata,'obsdata', obsdata,'stddata',stddata,'score',scoren);
 
 %-----------------------------------------------------------------
 % READ DATA
@@ -97,7 +96,6 @@ datamatrix=struct('moddata',moddata,'refdata',refdata,'valdata',valdata,'obsdata
 
 read_data;
 datamatrix.moddata=moddata; datamatrix.refdata=refdata; datamatrix.obsdata=obsdata;
-datamatrix.valdata=valdata;
 
 datamatrix.variables={4,'OLR [W/m2]','OSR [W/m2]','LHFL [W/m2]'};
 
