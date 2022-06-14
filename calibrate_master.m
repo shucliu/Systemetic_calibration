@@ -36,9 +36,9 @@ addpath('PolyfitnTools')
 
 % To run the testcase with the data that already exist, you can load this
 % file:
-OPT_matfile='opt_4months_5para_cloud_num1e7_v2';
+OPT_matfile='opt';
 %OPT_matfile='opt_4months_5para_cloud_num1e5';
-rOPT_matfile='./data/opt_4months_5para_cloud_num1e7_v2';
+rOPT_matfile='./data/opt';
 
 % Otherwise, you first have to run with optrun=false; to get the OPT
 % parameters. Make sure you're saving the run with you OPT-parameters OPT_matfile='calibration_OPT_';
@@ -134,8 +134,8 @@ else
         % (1) Find optimal model parameters using a latin hypercube
         % optimisation
         
-        lhacc=3000000;
-%        lhacc=300000;
+%        lhacc=3000000;
+        lhacc=30;
         % Number of experiments to sample parameter space, for
         % means of speed a low number of parameter combinations
         % is used.
@@ -151,7 +151,8 @@ else
         %% (2) Plot performance range covered  by the metamodel and compare to
         %% reference simulation
        
-        histplot_opt(lhscore,datamatrix)
+        %histplot_opt(lhscore,datamatrix)
+	histplot_ref(lhscore,datamatrix)
         
         %% (3) Plot optimised parameter distributions
         errm=0.015; % Uncertainty of the metamodel, is currently set from
